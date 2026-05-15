@@ -1,27 +1,182 @@
-*{
-    padding:0;
-    margin:0;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-.main{
-    background-image: url("assests/images/bg.png");
-    background-position: center center;
-    background-repeat:no-repeat;
-    background-size: 100vw;
-    height:80vh;
+body{
+    background-color: black;
+}
+.main {
+  background-image: url("assests/images/bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(1200px, 100vw);
+  height: 70vh;
+  position: relative;
+}
+.main .box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.7;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+nav {
+  display: flex;
+  max-width: 80vw;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+nav button:first-child {
+  background-color: transparent;
+  font-weight: bold;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:2px;
+}
+nav button:first-child:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgb(160, 160, 135);
+  filter: brightness(1.05);
+}
+
+.btn {
+  background-color: yellow;
+  font-weight: bold;
+  border: 1px solid black;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+margin-left:2px;
+}
+.btn:hover {
+  transform: scale(1.03);
+ box-shadow: 0 0 15px rgb(209, 209, 152);
+filter: brightness(1.05);
+}
+.btn-yl{
+  
+    background-color: yellow;
+  font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  border: none;
+  color: black;
+
+    padding: 0px 28px;   
+    border-radius: 4px;
+    font-size: 24px;
+    height: 56px;
+ transition: 0.2s;
+  cursor: pointer;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 8px;
+
+}
+.btn-yl:hover{
+ transform: scale(1.03);
+ box-shadow: 0 0 15px rgb(209, 209, 152);
+filter: brightness(1.05);
+}
+
+nav img {
+  width: 250px;
+  color: yellow;
+  position: relative;
+  z-index: 20;
+}
+.flex {
+  display: flex;
+  colour: white;
+  position: relative;
+  z-index: 10;
+}
+.hero {
+  height: 59vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  font-family:
+    Netflix Sans,
+    Helvetica Neue,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    sans-serif;
+    padding:0 30px;
+    gap:18px;
+}
+.hero span:first-child{
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 1.1;
+    text-align: center;
+  
+}
+.hero span:nth-child(2){
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+.hero span:nth-child(3){
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+.seperation{
+    height: 7px;
+    background-color: rgb(65, 64, 64);;
+}
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top: 10px;
+}
+
+.hero-buttons input{
+    height:56px;
+    width:370px;
+    padding:0 16px;
+    font-size:18px;
+    border-radius:4px;
+    border:1px solid gray;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    outline: none;
+}
+.hero-buttons input::placeholder{
+    color: rgba(255,255,255,0.7);
+}
+.email-box{
     position: relative;
 }
-.main .box{
-    height:80vh;
-    width: 100%;
-    opacity: 0.44;
-    background-color: black;
+
+label{
     position: absolute;
-    top:0;
+    left: 15px;
+    top: 15px;
+    transition: 0.2s;
 }
-nav{
-    display:flex;
-    max-width: 80vw;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
+
+input:focus + label,
+input:valid + label{
+    top: 5px;
+    font-size: 12px;
 }
