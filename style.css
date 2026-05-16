@@ -3,22 +3,32 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
+  overflow-x: hidden;
 }
 .main {
   background-image: url("assests/images/bg.png");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: max(1200px, 100vw);
+  background-size: cover;
   height: 70vh;
   position: relative;
+   padding-bottom: 60px;
 }
 .main .box {
   height: 70vh;
   width: 100%;
-  opacity: 0.7;
-  background-color: black;
+  opacity: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.7) 0%,    
+    rgba(0,0,0,0.7) 40%, 
+    rgba(0,0,0,0.75) 85%, 
+    rgba(0,0,0,1) 100%
+  );
+  
+
   position: absolute;
   top: 0;
 }
@@ -38,7 +48,7 @@ nav button:first-child {
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
-  margin-right:2px;
+  margin-right: 2px;
 }
 nav button:first-child:hover {
   transform: scale(1.03);
@@ -54,38 +64,43 @@ nav button:first-child:hover {
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
-margin-left:2px;
+  margin-left: 2px;
 }
 .btn:hover {
   transform: scale(1.03);
- box-shadow: 0 0 15px rgb(209, 209, 152);
-filter: brightness(1.05);
+  box-shadow: 0 0 18px rgb(255, 255, 0, 0.16);
+  filter: brightness(1.05);
 }
-.btn-yl{
-  
-    background-color: yellow;
-  font-weight: 600;
-    font-family: "Poppins", sans-serif;
-  border: none;
+.btn-yl {
+  background: rgba(255, 255, 0, 1);
+
+  border: 1px solid rgba(255, 255, 0, 0.7);
+
   color: black;
 
-    padding: 0px 28px;   
-    border-radius: 4px;
-    font-size: 24px;
-    height: 56px;
- transition: 0.2s;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  padding: 0px 28px;
+  border-radius: 4px;
+  font-size: 22px;
+  height: 56px;
+
+  transition: 0.2s;
   cursor: pointer;
-   display: flex;
-    align-items: center;
-    justify-content: center;
 
-    margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  margin-left: 8px;
 }
-.btn-yl:hover{
- transform: scale(1.03);
- box-shadow: 0 0 15px rgb(209, 209, 152);
-filter: brightness(1.05);
+.btn-yl:hover {
+  background: rgba(255, 255, 0, 0.16);
+
+  transform: scale(1.03);
+
+  box-shadow: 0 0 18px rgba(255, 255, 0, 0.2);
 }
 
 nav img {
@@ -115,68 +130,260 @@ nav img {
     Roboto,
     Ubuntu,
     sans-serif;
-    padding:0 30px;
-    gap:18px;
+  padding: 0 30px;
+  gap: 18px;
 }
-.hero span:first-child{
-    font-family: "Poppins", sans-serif;
+.hero span:first-child {
+  font-family: "Poppins", sans-serif;
 
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 1.1;
-    text-align: center;
-  
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 1.1;
+  text-align: center;
 }
-.hero span:nth-child(2){
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
+.hero span:nth-child(2) {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
 }
-.hero span:nth-child(3){
-    font-weight: 400;
-    font-size: 18px;
-    margin-top: 10px;
-    text-align: center;
+.hero span:nth-child(3) {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
 }
-.seperation{
-    height: 7px;
-    background-color: rgb(65, 64, 64);;
-}
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    margin-top: 10px;
+.seperation {
+  height: 100px;
+  position: relative;
+  background: black;
+  overflow: hidden;
+  margin-top: -1px;
 }
 
-.hero-buttons input{
-    height:56px;
-    width:370px;
-    padding:0 16px;
-    font-size:18px;
-    border-radius:4px;
-    border:1px solid gray;
-    background:rgba(0,0,0,0.5);
-    color:white;
-    outline: none;
-}
-.hero-buttons input::placeholder{
-    color: rgba(255,255,255,0.7);
-}
-.email-box{
-    position: relative;
-}
+.seperation::before{
+    content: "";
 
-label{
     position: absolute;
-    left: 15px;
-    top: 15px;
-    transition: 0.2s;
+
+    top: 0;
+    left: -10%;
+
+    width: 120%;
+    height: 120px;
+
+    border-top: 4px solid #eb1a5f;
+
+    border-radius: 60%;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(25,0,255,0.28) 0%,
+        rgba(0,0,0,0.95) 70%
+    );
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-input:focus + label,
-input:valid + label{
-    top: 5px;
-    font-size: 12px;
+.hero-buttons input {
+  height: 56px;
+  width: 370px;
+  padding: 0 16px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  outline: none;
+}
+.hero-buttons input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.email-box {
+  position: relative;
+}
+
+.email-box label {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  transition: 0.2s;
+  opacity: 0.5;
+}
+
+.email-box input:focus + label,
+.email-box input:valid + label {
+  top: 5px;
+  font-size: 12px;
+}
+.First{
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+margin: auto;
+margin-top: 15px;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+   position: relative;
+   font-size: 20px;
+}
+.First:h1{
+  font-size: 40px;
+  font-family:
+    Netflix Sans,
+    Helvetica Neue,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    sans-serif;
+  padding: 0 30px;
+  gap: 18px;
+}
+.secImg {
+  position: relative;
+}
+.secImg img{
+  width: 30vw;
+  position: relative;
+   z-index: 10;
+}
+.secImg video {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-52%);
+
+  width: 76%;
+  height: 70%;
+  
+  z-index: -1;
+  object-fit: cover; 
+}
+
+.seperation1 {
+  height: 1px;
+  background: rgb(80, 80, 80);
+  margin: 40px auto;
+  max-width: 70vw;
+}
+.Second{
+ display: flex;
+  justify-content: flex-start;
+  padding-right: 80px;
+ 
+ max-width: 70vw;
+  margin: auto;
+  color:white;
+ 
+  font-size: 18px;
+   gap: 90px; 
+   
+}
+.Second:h1{
+  
+  font-size: 40px;
+  font-family:
+    Netflix Sans,
+    Helvetica Neue,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    sans-serif;
+   
+}
+.secImg1 img{
+ 
+ width: 35vw; 
+ justify-content: left;
+}
+.Second div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Third{
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+margin: auto;
+margin-top: 38px;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+   position: relative;
+   font-size: 18px;
+}
+.Third:h1{
+  font-size: 40px;
+  font-family:
+    Netflix Sans,
+    Helvetica Neue,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    sans-serif;
+  padding: 0 30px;
+  gap: 18px;
+}
+.secImg3 {
+  position: relative;
+}
+.secImg3 img{
+  width: 30vw;
+  position: relative;
+   z-index: 10;
+}
+.secImg3 video {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 63%;
+  height: 63%;
+  
+  z-index: -1;
+  object-fit: cover; 
+}
+.Fourth{
+ display: flex;
+  justify-content: flex-start;
+  padding-right: 20px;
+ 
+ max-width: 70vw;
+  margin: auto;
+  color:white;
+ 
+  font-size: 18px;
+   gap: 80px; 
+   
+}
+.Fourth:h1{
+  
+  font-size: 40px;
+  font-family:
+    Netflix Sans,
+    Helvetica Neue,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    sans-serif;
+   
+}
+.secImg4 img{
+ 
+ width: 35vw; 
+ justify-content: center;
+}
+.Fourth div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
